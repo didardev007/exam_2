@@ -35,13 +35,15 @@ class ProductController extends Controller
             $query->whereIn('category_id', $f_categories);
         })
 
-            ->when($f_brands, function ($query) use ($f_brands){
+            ->when($f_brands, function ($query) use ($f_brands) {
                 $query->whereIn('brand_id', $f_brands);
             })
 
-            ->when($f_sellers, function ($query) use ($f_sellers){
+            ->when($f_sellers, function ($query) use ($f_sellers) {
                 $query->whereIn('seller_id', $f_sellers);
             })
+
+            ->with('seller')
 
             ->when(isset($f_sort), function ($query) use ($f_sort) {
                 if ($f_sort == 'old-to-new') {

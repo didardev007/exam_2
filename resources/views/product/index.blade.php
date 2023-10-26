@@ -17,6 +17,7 @@
                                 <div class="card bg-dark text-danger border-danger" style="width:20rem;margin:20px 0 24px 0">
                                     <div class="card-body">
                                         <h4 class="card-title">{{$product->name}}</h4>
+                                        <h4 class="card-title">{{$product->seller->name}}</h4>
                                         <div class="card-text pb-3">{{$product->price}} TMT</div>
                                     </div>
                                 </div>
