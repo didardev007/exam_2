@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Seller;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
@@ -35,13 +36,18 @@ class AppServiceProvider extends ServiceProvider
 
 
             $brands = Brand::withCount('products')
-//                ->orderBy('name')
+                ->orderBy('name')
+                ->get();
+
+            $sellers = Seller::withCount('products')
+                ->orderBy('name')
                 ->get();
 
 
             $view->with([
                 'categories' => $categories,
                 'brands' => $brands,
+                'sellers' => $sellers,
             ]);
         });
     }

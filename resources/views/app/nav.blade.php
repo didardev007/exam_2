@@ -21,5 +21,14 @@
                 </li>
             @endforeach
         </ul>
+
+        <a class="nav-link dropdown-toggle link-danger" href="#" data-bs-toggle="dropdown" aria-expanded="true">Sellers</a>
+        <ul class="dropdown-menu bg-dark">
+            @foreach($sellers as $seller)
+                <li class="dropdown-item ps-0">
+                    <a class="nav-link link-danger" href="{{ route('product.index', ['sellers' => [$seller->id]] ) }}">{{$seller->name}}</a>
+                </li>
+            @endforeach
+        </ul>
     </ul>
 </header>

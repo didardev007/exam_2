@@ -18,6 +18,15 @@
     </div>
 
     <div class="mb-3">
+        <label for="sellers" class="form-label fw-semibold text-danger">Sellers</label>
+        <select class="form-select form-select-sm" name="sellers[]" id="sellers">
+            @foreach($sellers as $seller)
+                <option value="{{ $seller->id }}" {{ in_array($seller->id, $f_sellers) ? 'selected' : '' }}>{{ $seller->name }}</option>
+            @endforeach
+        </select>
+    </div>
+
+    <div class="mb-3">
         <label for="sort" class="form-label fw-semibold text-danger">Sort</label>
         <select class="form-select form-select-sm" name="sort" id="sort">
             <option value="new-to-old" {{ 'new-to-old' == $f_sort ? 'selected' : '' }}>new to old</option>
