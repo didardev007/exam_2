@@ -23,6 +23,7 @@
                                 <div class="card-body">
                                     <h4 class="card-title">{{$product->name}}</h4>
                                     <div class="card-text pb-3">{{ round($product->price, 2) }} <small>TMT</small> </div>
+                                    <h5 class="card-text pb-3"> {{$product->seller->name}} </h5>
                                 </div>
                             </div>
                         </a>

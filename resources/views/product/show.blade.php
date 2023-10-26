@@ -17,7 +17,7 @@
                 <div class="h5 fw-normal">{{$product->country->name}}</div>
                 <div class="h5 fw-normal">Material: {{$product->material->name}}</div>
                 <div class="h5 fw-normal">Color: {{$product->color->name}}</div>
-                <div class="h5 fw-normal">Guarantee: {{$product->guarantee->name}}</div>
+                <div class="h5 fw-normal">Guarantee: {{$product->guarantee->name}} Yyl</div>
                 <div class="h5 fw-normal pb-2">{{$product->description}}</div>
             </div>
         </div>
