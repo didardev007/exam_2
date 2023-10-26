@@ -12,7 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-
-        \App\Models\User::factory(10)->create();
+        $this->call([
+            LocationSeeder::class,
+            CategorySeeder::class,
+            BrandSeeder::class,
+            SellerSeeder::class,
+            CountrySeeder::class,
+            MaterialSeeder::class,
+            ColorSeeder::class,
+        ]);
+        \App\Models\Guarantee::factory(10)->create();
+        \App\Models\Madel::factory(300)->create();
+        \App\Models\Product::factory(300)->create();
     }
 }

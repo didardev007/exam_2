@@ -12,8 +12,8 @@ class SellerSeeder extends Seeder
     public function run(): void
     {
         $sellers = [
-            ['name' => 'Didar', 'location_id' => Location::where('name', 'Asgabat')->firs()->id],
-            ['name' => 'Selim', 'location_id' => Location::where('name', 'Ahal')->firs()->id],
+            ['name' => 'Didar', 'location_id' => Location::where('name', 'Asgabat')->first()->id],
+            ['name' => 'Selim', 'location_id' => Location::where('name', 'Ahal')->first()->id],
             ['name' => 'Tirkesh', 'location_id' => Location::where('name', 'Asgabat')->first()->id],
             ['name' => 'Maksat', 'location_id' => Location::where('name', 'Lebap')->first()->id],
             ['name' => 'Dawut', 'location_id' => Location::where('name', 'Dasoguz')->first()->id],
