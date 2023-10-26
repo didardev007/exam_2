@@ -11,7 +11,7 @@
                 <a href="{{ route('product.index', ['categories' => [$categoryProduct['category']->id]]) }}" class="link-danger text-decoration-none">
                     {{ $categoryProduct['category']->name }}
                 </a>
-                <span class="text-warning h4 fw-normal">({{$categoryProduct['category']->products_count}}</span>
+                <span class="text-warning h4 fw-normal">({{$categoryProduct['category']->products_count}})</span>
             </div>
 
 
