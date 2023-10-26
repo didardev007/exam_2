@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Brand;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\View;
@@ -32,8 +33,15 @@ class AppServiceProvider extends ServiceProvider
                 ->orderBy('name')
                 ->get();
 
+
+            $brands = Brand::withCount('products')
+//                ->orderBy('name')
+                ->get();
+
+
             $view->with([
                 'categories' => $categories,
+                'brands' => $brands,
             ]);
         });
     }
