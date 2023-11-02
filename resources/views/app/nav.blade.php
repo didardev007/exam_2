@@ -4,7 +4,7 @@
     </a>
 
     <ul class="nav nav-pills">
-        <a class="nav-link dropdown-toggle link-danger" href="#" data-bs-toggle="dropdown" aria-expanded="true">Categories</a>
+        <a class="nav-link dropdown-toggle link-danger" href="#" data-bs-toggle="dropdown" aria-expanded="true">@lang('categories')</a>
         <ul class="dropdown-menu bg-dark">
             @foreach($categories as $category)
                 <li class="dropdown-item ps-0">
@@ -29,6 +29,19 @@
                     <a class="nav-link link-danger" href="{{ route('product.index', ['sellers' => [$seller->id]] ) }}">{{$seller->name}}</a>
                 </li>
             @endforeach
+        </ul>
+
+        <a class="nav-link dropdown-toggle link-info" href="#" data-bs-toggle="dropdown" aria-expanded="false">language</a>
+        <ul class="dropdown-menu">
+            <li class="dropdown-item">
+                <a class="nav-link link-success" href="{{ route('locale', 'tm') }}">Türkmen</a>
+            </li>
+            <li class="dropdown-item">
+                <a class="nav-link link-danger" href="{{ route('locale', 'en') }}">English</a>
+            </li>
+            <li class="dropdown-item">
+                <a class="nav-link link-primary" href="{{ route('locale', 'ru') }}">Русский</a>
+            </li>
         </ul>
     </ul>
 </header>

@@ -16,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/locale/{locale}', [HomeController::class,'locale'])->name('locale')->whereIn('locale', ['tm', 'ru', 'en']);
 Route::get('/products', [ProductController::class, 'index'])->name('product.index');
 Route::get('/product/{id}', [ProductController::class, 'show'])->name('show');

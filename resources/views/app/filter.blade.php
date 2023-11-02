@@ -1,6 +1,6 @@
 <form action="{{ url()->current() }}">
     <div class="mb-3">
-        <label for="categories" class="form-label fw-semibold text-danger">Categories</label>
+        <label for="categories" class="form-label fw-semibold text-danger">@lang('categories')</label>
         <select class="form-select form-select-sm" name="categories[]" id="categories">
             @foreach($categories as $category)
                 <option value="{{ $category->id }}" {{ in_array($category->id, $f_categories) ? 'selected' : '' }}>{{ $category->name }}</option>
