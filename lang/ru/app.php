@@ -5,4 +5,5 @@ return [
     'categories' => 'Категория',
     'brands' => 'Бранд',
     'sellers' => 'Продовец',
+    'languages' => 'Русский',
 ];

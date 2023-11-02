@@ -5,4 +5,5 @@ return [
     'categories' => 'Categories',
     'brands' => 'Brands',
     'sellers' => 'Sellers',
+    'languages' => 'Languages',
 ];
