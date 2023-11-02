@@ -4,6 +4,13 @@
     </a>
 
     <ul class="nav nav-pills">
+
+        <li class="nav-item">
+            <a class="nav-link link-danger" href="{{ route('product.index') }}">
+                <i class="bi-search"></i> @lang('app.search')
+            </a>
+        </li>
+
         <a class="nav-link dropdown-toggle link-danger" href="#" data-bs-toggle="dropdown" aria-expanded="true">@lang('app.categories')</a>
         <ul class="dropdown-menu bg-dark">
             @foreach($categories as $category)
